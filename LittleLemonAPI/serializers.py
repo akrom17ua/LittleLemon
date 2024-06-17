@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import MenuItem, Category
+import bleach
 
 from decimal import Decimal
 # class MenuItemSerializer(serializers.Serializer):
