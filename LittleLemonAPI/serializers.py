@@ -18,6 +18,8 @@ class MenuItemSerializer(serializers.ModelSerializer):
     price_after_tax = serializers.SerializerMethodField(method_name='calculate_tax')
     category = CategorySerializer(read_only=True)
     category_id = serializers.IntegerField(write_only=True)
+    def validate_title(self, value):
+        return bleach.clean(value)
     class Meta:
         model = MenuItem
         fields = ['id', 'title', 'price', 'stock', 'price_after_tax', 'category', 'category_id']
