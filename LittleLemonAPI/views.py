@@ -16,6 +16,7 @@ def menu_items(request):
         to_price = request.query_params.get('to_price')
         search = request.query_params.get('search')
         ordering = request.query_params.get('ordering')
+        perpage = request.query_params.get('perpage', default=2)
         if category_name:
             items = items.filter(category__title=category_name)
         if to_price:
