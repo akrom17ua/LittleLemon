@@ -49,6 +49,8 @@ Installation
     Open your web browser and navigate to http://127.0.0.1:8000/ to see the application in action.
 
 Usage
+    ![image](https://github.com/akrom17ua/LittleLemon/assets/149670082/9d14fbb5-ef79-43a3-9704-2ec528f77df3)
+
   
 
 Contact
