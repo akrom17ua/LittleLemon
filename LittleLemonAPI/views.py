@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 @api_view()
 def menuitems(request):
-    items = MenuItem.objects.all()
+    items = MenuItem.objects.select_related('category').all()
     serialized_data = MenuItemSerializer(items, many=True)
     return Response(serialized_data.data)
 
